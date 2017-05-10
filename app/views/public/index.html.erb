@@ -8,13 +8,8 @@
 
 <p>Becoming a member of an affiliate, means you will have the security of knowing there is someone looking out for you and putting your interests first</p>
 
-<table class ="listing" summary="Affiliates list">
-  <tr class="header">
-    <th>Alphabetical</th>
-  </tr>
-  <% @affiliates.each do |affiliate| %>
-    <tr>
-      <td><%= link_to("#{affiliate.title}", affiliate_path(affiliate), :class => 'action show') %></td>
-    </tr>
-  <% end %>
-</table>
+<div class ="listing" summary="Affiliates list">
+
+	<%= render(:partial => 'affiliates/public') %>
+
+</div>

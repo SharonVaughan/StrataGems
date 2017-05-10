@@ -1,0 +1,11 @@
+<table class ="listing" summary="Affiliates list">
+  <tr class="header">
+    <th>Alphabetical</th>
+  </tr>
+  @affiliates = Affiliate.sorted
+  <% @affiliates.each do |affiliate| %>
+    <tr>
+      <td><%= link_to("#{affiliate.title}", affiliate_path(affiliate), :class => 'action show_public') %></td>
+    </tr>
+  <% end %>
+</table>

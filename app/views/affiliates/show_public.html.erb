@@ -1,7 +1,6 @@
+<%= error_messages_for(f.object) %>
 
-<% @page_title = @affiliate.title %>
-
-<div class="public show">
+<div class="affiliate public">
   <h1><%= @affiliate.title %></h1>
 
   <div class="Affiliate detail view">
@@ -21,7 +20,7 @@
 
   </div>
 
-<%= link_to("Join", new_user_session_path, :class => 'action new') %>
+<%= link_to("Join", new_user_registration_path, :class => 'action new') %>
 
 </div>
 
