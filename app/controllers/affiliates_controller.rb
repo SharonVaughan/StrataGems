@@ -1,5 +1,6 @@
 class AffiliatesController < ApplicationController
 
+  before_action :authenticate_user!, except: [:index, :show]
   # before_action :find_student
 
   def index
@@ -11,11 +12,11 @@ class AffiliatesController < ApplicationController
   end
 
   def new
-    @affiliate = Affiliate.new
+    @affiliate = current_user.affiliates.build
   end
 
   def create
-    @affiliate = Affiliate.new(affiliate_params)
+    @affiliate = current_user.affiliates.build(affiliate_params)
     @affiliate.user = current_user
     if @affiliate.save
       redirect_to(affiliates_path)
