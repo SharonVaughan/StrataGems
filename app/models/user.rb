@@ -8,6 +8,9 @@ class User < ApplicationRecord
 	has_many :attendances
 	has_many :meetings, through: :attendances
 
+	has_attached_file :avatar, styles: { thumb: "100x100#" }
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
 	scope :visible, lambda { where(:visible => true) }
 	scope :invisible, lambda { where(:visible => false) }
 	scope :sorted, lambda { order("username ASC") }

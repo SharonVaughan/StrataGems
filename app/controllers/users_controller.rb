@@ -53,7 +53,8 @@ class UsersController < ApplicationController
       :phone_number,
       :email,
       :username,
-      :password)
+      :password,
+      :avatar)
   end
 
 end

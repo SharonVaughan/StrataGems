@@ -2,6 +2,10 @@
 
 <table summary="User form fields">
   <tr>
+    <th>Avatar</th>
+    <td><%= f.file_field(:avatar) %></td>
+  </tr>
+  <tr>
     <th>Firtst Name</th>
     <td><%= f.text_field(:first_name) %></td>
   </tr>
@@ -26,4 +30,3 @@
     <td><%= f.text_field(:password) %></td>
   </tr>
 </table>
-

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :controllers
   root :to => 'public#index'
 
   get 'show/:title', :to => 'public#show', :as => 'public_show'
