@@ -1,0 +1,33 @@
+<% @page_title = "All Users" %>
+
+<%= link_to("<< Back to Menu", users_path, :class => 'back-link') %>
+
+<div class ="users index">  <!-- controller and action, CSS easier -->
+	<h2>Students</h2>
+
+	<%= image_tag('plus_sign.png', :size => '11x11', :alt => '+') %>
+	<%= link_to("Add New User", new_user_path, :class => 'action new') %>
+
+	<table class ="listing" summary="Users list">
+		<tr class="header">
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Affiliates</th>
+			<th>Actions</th>
+			<th>Affiliate</th>
+		</tr>
+		<% @users.each do |user| %>
+			<tr>
+				<td><%= user.first_name %></td>
+				<td><%= user.last_name %></td>
+				<td><%= user.affiliates.size %></td>
+				<td class="actions">
+					<%= link_to("View Affiliates", affiliates_path, :class => 'action show') %>
+					<%= link_to("Show", user_path(user), :class => 'action show') %>
+					<%= link_to("Edit", edit_user_path(user), :class => 'action edit') %>
+					<%= link_to("Delete", delete_user_path(user), :class => 'action delete') %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</div>

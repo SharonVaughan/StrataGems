@@ -1,0 +1,31 @@
+
+<% @page_title = @affiliate.title %>
+
+<div class="public show">
+  <h1><%= @affiliate.title %></h1>
+
+  <div class="Affiliate detail view">
+		<h3><%= @affiliate.about %></h3>
+    <h4><%= @affiliate.phone_number %></h4>
+    <h4><%= @affiliate.email %></h4>
+    <h4><%= @affiliate.address %></h4>
+    <h4><%= @affiliate.suburb %></h4>
+    <h4><%= @affiliate.postcode %></h4>
+    <h4>Annual Fee :</h4>
+    <h4><%= @affiliate.annual_fee %></h4>
+
+    <tr>
+      <th>Category</th>
+      <td><%= @affiliate.category %></td>
+    </tr>
+
+  </div>
+
+<%= link_to("Join", new_user_session_path, :class => 'action new') %>
+
+</div>
+
+  <h6>Google Map of location</h6>
+
+</div>
+

@@ -1,0 +1,18 @@
+<% @page_title = "Update Affiliate" %>
+
+<%= link_to("<< Back to List", affiliates_path, :class => 'back-link') %>
+
+<div class="affiliates edit">
+  <h2>Update Affiliate</h2>
+
+  <%= form_for(@affiliate, :url => affiliate_path) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Update Affiliate") %>
+    </div>
+
+  <% end %>
+</div>
+

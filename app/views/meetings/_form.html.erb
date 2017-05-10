@@ -1,0 +1,28 @@
+<%= error_messages_for(f.object) %>
+
+<table summary="Meeting form fields">
+  <tr>
+    <th>Affiliate</th>
+    <td><%= f.object.affiliate.id %></td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td><%= f.text_field(:title) %></td>
+  </tr>
+  <tr>
+    <th>Blurb</th>
+    <td><%= f.text_area(:blurb, :size => '40x10') %></td>
+  </tr>
+  <tr>
+    <th>Address</th>
+    <td><%= f.text_field(:address) %></td>
+  </tr>
+  <tr>
+    <th>Suburb</th>
+    <td><%= f.text_field(:suburb) %></td>
+  </tr>
+  <tr>
+    <th>Postcode</th>
+    <td><%= f.text_field(:postcode) %></td>
+  </tr>
+</table>

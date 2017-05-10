@@ -1,0 +1,29 @@
+<% @page_title = "All Meetings" %>
+
+<%= link_to("<< Back to Affiliates Menu", affiliates_path, :class => 'back-link') %>
+
+<div class ="meetings index">  <!-- controller and action, CSS easier -->
+	<h2>Meetings</h2>
+
+	<%= image_tag('plus_sign.png', :size => '11x11', :alt => '+') %>
+	<%= link_to("Add New Meeting", new_meeting_path(:affiliate_id => @affiliate.id), :class => 'action new') %>
+
+	<table class ="listing" summary="Meetings list">
+		<tr class="header">
+			<th>Title</th>
+			<th>Blurb</th>
+			<th>Actions</th>
+		</tr>
+		<% @meetings.each do |meeting| %>
+			<tr>
+				<td class="center"><%= meeting.title %></td>
+				<td class="center"><%= meeting.blurb %></td>
+				<td class="actions">
+					<%= link_to("Show", meeting_path(meeting, :affiliate_id => @affiliate.id), :class => 'action show') %>
+					<%= link_to("Edit", edit_meeting_path(meeting, :affiliate_id => @affiliate.id), :class => 'action edit') %>
+					<%= link_to("Delete", delete_meeting_path(meeting, :affiliate_id => @affiliate.id), :class => 'action delete') %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</div>

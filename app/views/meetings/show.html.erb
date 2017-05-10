@@ -1,0 +1,32 @@
+<% @page_title = "Display Meeting" %>
+
+<%= link_to("<< Back to Meetings List", meetings_path(:affiliate_id => @affiliate.id), :class => 'back-link') %>
+
+<div class="meetings show">
+  <h2>Show Meeting</h2>
+
+  <table summary="Meeting detail view">
+    <tr>
+      <th>Title</th>
+      <td><%= @meeting.title %></td>
+    </tr>
+    <tr>
+      <th>Blurb</th>
+      <td><%= @meeting.blurb %></td>
+    </tr>
+    <tr>
+    <tr>
+      <th>Address</th>
+      <td><%= @meeting.address %></td>
+    </tr>
+    <tr>
+      <th>Suburb</th>
+      <td><%= @meeting.suburb %></td>
+    </tr>
+    <tr>
+      <th>Postcode</th>
+      <td><%= @meeting.postcode %></td>
+    </tr>
+  </table>
+
+</div>

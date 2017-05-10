@@ -1,0 +1,30 @@
+<% @page_title = "All Affiliates" %>
+
+<%= link_to("<< Back to Users Menu", users_path, :class => 'back-link') %>
+
+<div class ="affiliates index">  <!-- controller and action, CSS easier -->
+	<h2>Affiliates</h2>
+
+	<%= image_tag('plus_sign.png', :size => '11x11', :alt => '+') %>
+	<%= link_to("Add New Affiliate", new_affiliate_path, :class => 'action new') %>
+
+	<table class ="listing" summary="Affiliates list">
+		<tr class="header">
+			<th>Title</th>
+			<th>About</th>
+			<th>Actions</th>
+		</tr>
+		<% @affiliates.each do |affiliate| %>
+			<tr>
+				<td><%= affiliate.title %></td>
+				<td><%= affiliate.about %></td>
+				<td class="actions">
+					<%= link_to("View Meetings", meetings_path(:affiliate_id => affiliate.id), :class => 'action show') %>
+					<%= link_to("Show", affiliate_path(affiliate), :class => 'action show') %>
+					<%= link_to("Edit", edit_affiliate_path(affiliate), :class => 'action edit') %>
+					<%= link_to("Delete", delete_affiliate_path(affiliate), :class => 'action delete') %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</div>

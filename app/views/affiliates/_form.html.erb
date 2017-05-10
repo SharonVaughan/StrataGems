@@ -1,0 +1,40 @@
+<%= error_messages_for(f.object) %>
+
+<table summary="Affiliate form fields">
+  <tr>
+    <th>Title</th>
+    <td><%= f.text_field(:title) %></td>
+  </tr>
+  <tr>
+    <th>About</th>
+    <td><%= f.text_area(:about, :size => '40x10') %></td>
+  </tr>
+  <tr>
+    <th>Phone Number</th>
+    <td><%= f.text_field(:phone_number) %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td><%= f.text_field(:email) %></td>
+  </tr>
+  <tr>
+    <th>Address</th>
+    <td><%= f.text_field(:address) %></td>
+  </tr>
+  <tr>
+    <th>Suburb</th>
+    <td><%= f.text_field(:suburb) %></td>
+  </tr>
+  <tr>
+    <th>Postcode</th>
+    <td><%= f.text_field(:postcode) %></td>
+  </tr>
+  <tr>
+    <th>Annual Fee</th>
+    <td><%= f.text_field(:annual_fee) %></td>
+  </tr>
+  <tr>
+    <th>Category</th>
+    <td><%= f.select(:category, %w{ Academic Creatives Cuisine Cultural Languages Spiritual Social Sports }) %></td>
+  </tr>
+</table>

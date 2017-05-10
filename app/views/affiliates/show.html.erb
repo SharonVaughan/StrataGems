@@ -1,0 +1,51 @@
+<% @page_title = "Display Affiliate" %>
+
+<%= link_to("<< Back to Affiliates List", affiliates_path, :class => 'back-link') %>
+
+<div class="affiliates show">
+  <h2>Show Affiliate</h2>
+
+  <table summary="Affiliate detail view">
+    <tr>
+      <th>Title</th>
+      <td><%= @affiliate.title %></td>
+    </tr>
+    <tr>
+      <th>About</th>
+      <td><%= @affiliate.about %></td>
+    </tr>
+    <tr>
+      <th>Phone Number</th>
+      <td><%= @affiliate.phone_number %></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><%= @affiliate.email %></td>
+    </tr>
+    <tr>
+      <th>Address</th>
+      <td><%= @affiliate.address %></td>
+    </tr>
+    <tr>
+      <th>Suburb</th>
+      <td><%= @affiliate.suburb %></td>
+    </tr>
+    <tr>
+      <th>Postcode</th>
+      <td><%= @affiliate.postcode %></td>
+    </tr>
+    <tr>
+      <th>Annual Fee</th>
+      <td><%= @affiliate.annual_fee %></td>
+    </tr>
+    <tr>
+      <th>Category</th>
+      <td><%= @affiliate.category %></td>
+    </tr>
+    <tr>
+      <th>User</th>
+      <td><%= @affiliate.username %></td>
+    </tr>
+  </table>
+
+</div>

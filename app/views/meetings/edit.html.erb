@@ -1,0 +1,17 @@
+<% @page_title = "Update Meeting" %>
+
+<%= link_to("<< Back to List", meetings_path(:affiliate_id => @affiliate.id), :class => 'back-link') %>
+
+<div class="meetings edit">
+  <h2>Update Meeting</h2>
+
+  <%= form_for(@meeting, :url => meeting_path(@meeting, :affiliate_id => @affiliate.id)) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Update Meeting") %>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,20 @@
+<h1>Affiliates Index</h1>
+
+<p>Hi. This is your access point to student affiliates, run by students, for the students</p>
+
+<p>Not only are we committed to helping you succeed, we are also passionate about ensuring we create opportunities throughout the year for you to grow, succeed and have fun.</p>
+
+<p>We make it our mission to provide students with a range of activities, opportunities and services.</p>
+
+<p>Becoming a member of an affiliate, means you will have the security of knowing there is someone looking out for you and putting your interests first</p>
+
+<table class ="listing" summary="Affiliates list">
+  <tr class="header">
+    <th>Alphabetical</th>
+  </tr>
+  <% @affiliates.each do |affiliate| %>
+    <tr>
+      <td><%= link_to("#{affiliate.title}", affiliate_path(affiliate), :class => 'action show') %></td>
+    </tr>
+  <% end %>
+</table>
