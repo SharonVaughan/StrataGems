@@ -40,6 +40,9 @@ gem 'stripe', '~> 2.8'
 # Use for voting on a meeting
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'paperclip', '~> 5.1'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'searchkick', '~> 2.3'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

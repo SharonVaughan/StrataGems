@@ -3,8 +3,16 @@ class AffiliatesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   # before_action :find_student
 
+  def search
+    if params[:search].present?
+      @affiliates = Affiliate.search(params[:search])
+    else
+      @affiliates = Affiliate.all
+    end
+  end
+
   def index
-    @affiliates = Affiliate.sorted
+    @affiliates = Affiliate.all
   end
 
   def show

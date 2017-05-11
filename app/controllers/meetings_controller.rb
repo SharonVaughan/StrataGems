@@ -60,7 +60,7 @@ class MeetingsController < ApplicationController
   end
 
   def find_affiliate
-    @affiliate = Affiliate.find(params[:affiliate_id])
+    @affiliate = Affiliate.find(params[:affiliate_id => @affiliate.id])
   end
 
 end

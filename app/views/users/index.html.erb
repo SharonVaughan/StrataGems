@@ -10,15 +10,15 @@
 
 	<table class ="listing" summary="Users list">
 		<tr class="header">
+			<th>Avatar</th>
 			<th>First Name</th>
 			<th>Last Name</th>
-			<th>Affiliates</th>
+			<th>Number of Affiliates</th>
 			<th>Actions</th>
-			<th>Affiliate</th>
 		</tr>
 		<% @users.each do |user| %>
 			<tr>
-				<td><%= image_tag @user.avatar.url(:thumb) %></td>
+				<td><%= image_tag user.avatar.url(:thumb) %></td>
 				<td><%= user.first_name %></td>
 				<td><%= user.last_name %></td>
 				<td><%= user.affiliates.size %></td>

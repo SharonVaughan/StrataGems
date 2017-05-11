@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :controllers
   root :to => 'public#index'
 
   get 'show/:title', :to => 'public#show', :as => 'public_show'
 
   devise_for :users
+  resources :users, only: [:index, :show]
 
   resources :charges
 

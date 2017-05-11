@@ -4,6 +4,7 @@ class PublicController < ApplicationController
 
   def index
   	# intro text
+    @affiliates = Affiliate.all
   end
 
   def show

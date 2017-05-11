@@ -1,6 +1,10 @@
 <% @page_title = "Display Affiliate" %>
 
-<%= link_to("<< Back to Affiliates List", affiliates_path, :class => 'back-link') %>
+<% if user_signed_in? %>
+  <%= link_to("<< Back to Affiliates List", affiliates_path, :class => 'back-link') %>
+<% else %>
+  <%= link_to("<< Back to Homepage", root_path, :class => 'back-link') %>
+<% end %>
 
 <div class="affiliates show">
   <h2>Show Affiliate</h2>
@@ -41,10 +45,6 @@
     <tr>
       <th>Category</th>
       <td><%= @affiliate.category %></td>
-    </tr>
-    <tr>
-      <th>User</th>
-      <td><%= @affiliate.username %></td>
     </tr>
   </table>
 

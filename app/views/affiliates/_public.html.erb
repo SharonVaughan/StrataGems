@@ -2,8 +2,7 @@
   <tr class="header">
     <th>Alphabetical</th>
   </tr>
-  @affiliates = Affiliate.sorted
-  <% @affiliates.each do |affiliate| %>
+  <% affiliates.each do |affiliate| %>
     <tr>
       <td><%= link_to("#{affiliate.title}", affiliate_path(affiliate), :class => 'action show_public') %></td>
     </tr>

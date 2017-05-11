@@ -3,7 +3,7 @@ class Affiliate < ApplicationRecord
 	has_many :meetings
 	belongs_to :user
 
-	scope :sorted, lambda { order("title ASC") }
+	default_scope lambda { order("title ASC") }
 	scope :newest_first, lambda { order("created_at DESC") }
 	scope :search, lambda {|query| where(["title LIKE ?", "%#{query}%"]) }
 

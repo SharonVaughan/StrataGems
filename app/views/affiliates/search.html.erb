@@ -1,0 +1,9 @@
+<div class="row">
+  <% @affiliates.each do |affiliate| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag affiliate.avatar.url(:thumbnail), class: 'image'), affiliate %>
+      </div>
+    </div>
+  <% end %>
+</div>
