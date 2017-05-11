@@ -51,4 +51,12 @@ Individual association
 
 ![figma](https://cloud.githubusercontent.com/assets/20434999/25947591/757410ee-3693-11e7-805a-b183f2e51d12.png)
 
-
+## Gems I am using
+There are a number of gems included in the app:
+	- Devise: authentication of users
+	- Stripe: payment of the affiliate yearly membership
+	- acts_as_votable: rating system which I was going to use for students rating a meeting
+	- paperclip: allows users to add an avatar to their profile
+	- bootstrap: styling the site the easy way
+	- searchkick: enables searching of different models... although intend on changing this for Algolia, because it doesn't require a server
+	
