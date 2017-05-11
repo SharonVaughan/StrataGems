@@ -54,10 +54,10 @@ the interconnectivity between the pages of the app. Essentially there are two vi
 
 ## Gems I am using
 There are a number of gems included in the app:
-	- Devise: authentication of users
-	- Stripe: payment of the affiliate yearly membership
-	- acts_as_votable: rating system which I was going to use for students rating a meeting
-	- paperclip: allows users to add an avatar to their profile
-	- bootstrap: styling the site the easy way
-	- searchkick: enables searching of different models... although intend on changing this for Algolia, because it doesn't require a server
+ - Devise: authentication of users
+ - Stripe: payment of the affiliate yearly membership
+ - acts_as_votable: rating system which I was going to use for students rating a meeting
+ - paperclip: allows users to add an avatar to their profile
+ - bootstrap: styling the site the easy way
+ - searchkick: enables searching of different models... although intend on changing this for Algolia, because it doesn't require a server
 	
