@@ -3,25 +3,6 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-<table summary="User form fields">
-  <tr>
-    <th>Firtst Name</th>
-    <td><%= f.text_field(:first_name) %></td>
-  </tr>
-  <tr>
-    <th>Last Name</th>
-    <td><%= f.text_field(:last_name) %></td>
-  </tr>
-  <tr>
-    <th>Phone Number</th>
-    <td><%= f.text_field(:phone_number) %></td>
-  </tr>
-  <tr>
-    <th>Username</th>
-    <td><%= f.text_field(:username) %></td>
-  </tr>
-</table>
-
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>

@@ -5,14 +5,14 @@
 <div class="affiliates edit">
   <h2>Update Affiliate</h2>
 
-  <%= form_for(@affiliate, :url => affiliate_path) do |f| %>
+	<%= form_for(@affiliate) do |f| %>
 
     <%= render(:partial => 'form', :locals => {:f => f}) %>
 
     <div class="form-buttons">
       <%= f.submit("Update Affiliate") %>
     </div>
-
+    
   <% end %>
 </div>
 

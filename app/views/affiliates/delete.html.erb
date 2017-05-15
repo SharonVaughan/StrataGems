@@ -5,7 +5,7 @@
 <div class="affiliates delete">
   <h2>Delete Affiliate</h2>
 
-  <%= form_for(@affiliate, :url => affiliate, :method => 'delete') do |f| %>
+  <%= form_for(@affiliate, :url => affiliate_path, :method => 'delete') do |f| %>
 
     <p>Are you sure you want to permanently delete this affiliate?</p>
 

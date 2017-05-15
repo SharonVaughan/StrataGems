@@ -1,9 +1,9 @@
 <% @page_title = "Display Affiliate" %>
 
 <% if user_signed_in? %>
-  <%= link_to("<< Back to Affiliates List", affiliates_path, :class => 'back-link') %>
-<% else %>
   <%= link_to("<< Back to Homepage", root_path, :class => 'back-link') %>
+<% else %>
+  <!-- Display nothing -->
 <% end %>
 
 <div class="affiliates show">
@@ -39,7 +39,7 @@
       <td><%= @affiliate.postcode %></td>
     </tr>
     <tr>
-      <th>Annual Fee</th>
+      <th>Annual Fee $</th>
       <td><%= @affiliate.annual_fee %></td>
     </tr>
     <tr>
@@ -47,5 +47,9 @@
       <td><%= @affiliate.category %></td>
     </tr>
   </table>
+
+  <h6>Google Map of location</h6>
+
+  <%= link_to "Join", new_user_registration_path, class: "active" %>
 
 </div>

@@ -1,32 +1,35 @@
 <%= error_messages_for(f.object) %>
 
-<table summary="User form fields">
-  <tr>
-    <th>Avatar</th>
-    <td><%= f.file_field(:avatar) %></td>
-  </tr>
-  <tr>
-    <th>Firtst Name</th>
-    <td><%= f.text_field(:first_name) %></td>
-  </tr>
-  <tr>
-    <th>Last Name</th>
-    <td><%= f.text_field(:last_name) %></td>
-  </tr>
-  <tr>
-    <th>Phone Number</th>
-    <td><%= f.text_field(:phone_number) %></td>
-  </tr>
-  <tr>
-    <th>Email</th>
-    <td><%= f.text_field(:email) %></td>
-  </tr>
-  <tr>
-    <th>Username</th>
-    <td><%= f.text_field(:username) %></td>
-  </tr>
-  <tr>
-    <th>Password</th>
-    <td><%= f.text_field(:password) %></td>
-  </tr>
-</table>
+<%= form_for(@user) do |f| %>
+
+  <table summary="User form fields">
+    <tr>
+      <th>Avatar</th>
+      <td><%= f.file_field(:avatar) %></td>
+    </tr>
+    <tr>
+      <th>First Name</th>
+      <td><%= f.text_field(:first_name) %></td>
+    </tr>
+    <tr>
+      <th>Last Name</th>
+      <td><%= f.text_field(:last_name) %></td>
+    </tr>
+    <tr>
+      <th>Phone Number</th>
+      <td><%= f.text_field(:phone_number) %></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><%= f.text_field(:email) %></td>
+    </tr>
+    <tr>
+      <th>Username</th>
+      <td><%= f.text_field(:username) %></td>
+    </tr>
+    <tr>
+      <th>Password</th>
+      <td><%= f.text_field(:password) %></td>
+    </tr>
+  </table>
+<% end %>

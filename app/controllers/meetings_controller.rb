@@ -1,6 +1,6 @@
 class MeetingsController < ApplicationController
 
-  before_action :find_affiliate
+  before_action(:find_affiliate, {only: [:index, :new, :create]})
 
   def index
     @meetings = @affiliate.meetings.sorted
@@ -16,11 +16,11 @@ class MeetingsController < ApplicationController
 
   def create
     @meeting = Meeting.new(meeting_params)
-    @meeting.affiliate_id = :affiliate.id
+    @meeting.affiliate_id = @affiliate.id
     if @meeting.save
-      redirect_to(meetings_path(:affiliate_id => @affiliate.id))
+      redirect_to(meetings_path(@affiliate))
     else
-      render('new')
+      render :new
     end
   end
 
@@ -60,7 +60,7 @@ class MeetingsController < ApplicationController
   end
 
   def find_affiliate
-    @affiliate = Affiliate.find(params[:affiliate_id => @affiliate.id])
+    @affiliate = Affiliate.find(params[:affiliate_id])
   end
 
 end

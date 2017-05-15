@@ -15,27 +15,14 @@
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
           <li><%= link_to "New Affiliate", new_affiliate_path, class: "active" %></li>
-          <li><%= link_to "New Meeting", new_meeting_path, class: "active" %></li>
-          <li><%= link_to("Edit Account", edit_user_path(current_user), :class => 'action edit') %></li>
+          <li><%= link_to("Edit Account", edit_user_password_path(current_user), :class => 'action edit') %></li>
           <li><%= link_to "Edit Sign-in", edit_user_registration_path %></li>
-          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-          <%#= form_tag search_users_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
-            <p>
-              <%#= text_field_tag :search, params[:search], class: "form-control" %>
-              <%#= submit_tag "Search", name: nil, class: "btn btn-default" %>
-            </p>
-          <%# end %>          
+          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>        
         <% else %>
-          <li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>
+          <li><%= link_to "New Affiliate", new_user_registration_path, class: "active" %></li>
           <li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
         <% end %>
       </ul>
-      <%#= form_tag search_affiliates_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
-        <p>
-          <%#= text_field_tag :search, params[:search], class: "form-control" %>
-          <%#= submit_tag "Search", name: nil, class: "btn btn-default" %>
-        </p>
-      <%# end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

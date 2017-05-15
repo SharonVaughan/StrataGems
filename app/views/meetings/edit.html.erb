@@ -5,7 +5,7 @@
 <div class="meetings edit">
   <h2>Update Meeting</h2>
 
-  <%= form_for(@meeting, :url => meeting_path(@meeting, :affiliate_id => @affiliate.id)) do |f| %>
+  <%= form_for(@meeting) do |f| %>
 
     <%= render(:partial => 'form', :locals => {:f => f}) %>
 

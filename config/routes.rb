@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'show/:title', :to => 'public#show', :as => 'public_show'
 
   devise_for :users
-  resources :users, only: [:index, :show]
+  # resources :users, only: [:index, :show]
 
   resources :charges
 
@@ -16,11 +16,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users do
-    member do
-      get :delete
-    end
-  end
+  # resources :users do
+  #   member do
+  #     get :delete
+  #   end
+  # end
 
   resources :affiliates do
     member do
